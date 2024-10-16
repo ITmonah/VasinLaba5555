@@ -30,8 +30,9 @@ public class NotificationsFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyPushNotification myPushNotification = new MyPushNotification(getActivity().getApplicationContext(),getActivity().getSystemService(NotificationManager.class));
-                myPushNotification.sendNotify("День","Скоро конец рабочего дня");
+                MyPushNotification myPushNotification = new MyPushNotification(requireContext(),
+                        requireActivity().getSystemService(NotificationManager.class));
+                myPushNotification.sendNotify("Васин Александр","Группа: Т-413901-НТ ИСиТ");
             }
         });
 
